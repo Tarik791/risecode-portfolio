@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@public/logo.svg";
+import php from "@public/icons/php.svg";
+import react from "@public/icons/react.svg";
+import nextjs from "@public/icons/nextjs.svg";
+import nodejs from "@public/icons/nodejs.svg";
+import golang from "@public/icons/golang.svg";
+import mysql from "@public/icons/mysql.svg";
+import postgresql from "@public/icons/postgresql.svg";
+import api from "@public/icons/api.svg";
+import docker from "@public/icons/docker.svg";
 
 export default function Home() {
   return (
@@ -49,15 +58,15 @@ export default function Home() {
         </Link>
         <div className="mt-24 bg-gray-50 rounded-2xl p-6 w-full flex flex-wrap justify-center gap-18 shadow-sm">
           {[
-            { src: "/icons/php.svg", alt: "PHP" },
-            { src: "/icons/react.svg", alt: "ReactJS" },
-            { src: "/icons/nextjs.svg", alt: "Next.js" },
-            { src: "/icons/nodejs.svg", alt: "Node.js" },
-            { src: "/icons/golang.svg", alt: "Golang" },
-            { src: "/icons/mysql.svg", alt: "MySQL" },
-            { src: "/icons/postgresql.svg", alt: "PostgreSQL" },
-            { src: "/icons/api.svg", alt: "API" },
-            { src: "/icons/docker.svg", alt: "Docker" },
+            { src: php, alt: "PHP" },
+            { src: react, alt: "ReactJS" },
+            { src: nextjs, alt: "Next.js" },
+            { src: nodejs, alt: "Node.js" },
+            { src: golang, alt: "Golang" },
+            { src: mysql, alt: "MySQL" },
+            { src: postgresql, alt: "PostgreSQL" },
+            { src: api, alt: "API" },
+            { src: docker, alt: "Docker" },
           ].map((icon, i) => (
             <div
               key={i}
