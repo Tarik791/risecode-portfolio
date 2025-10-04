@@ -1,10 +1,22 @@
 @import "tailwindcss";
-
-@keyframes rotate-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
-.curved-circle-animate {
-  animation: rotate-slow 160s linear infinite;
-  transform-origin: center;
+
+body {
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-montserrat);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
