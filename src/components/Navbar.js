@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { Menu, X } from "lucide-react"; // ikone
 import logo from "@public/logo.svg";
 
 export default function Navbar() {
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,9 +18,9 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "/about", label: "ABOUT" },
-    { href: "/work", label: "WORK" },
-    { href: "/contact", label: "CONTACT" },
+    { href: "#", label: "ABOUT" },
+    { href: "#", label: "WORK" },
+    { href: "#", label: "CONTACT" },
   ];
 
   return (
@@ -48,11 +46,7 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`text-sm tracking-widest transition-colors duration-500 ${
-                router.pathname === href
-                  ? "text-green-600 font-medium"
-                  : "text-gray-700 hover:text-green-600"
-              }`}
+              className='text-sm tracking-widest transition-colors duration-500'
             >
               {label}
             </Link>
@@ -88,11 +82,7 @@ export default function Navbar() {
               key={href}
               href={href}
               onClick={() => setIsOpen(false)}
-              className={`text-lg transition-colors ${
-                router.pathname === href
-                  ? "text-green-600 font-medium"
-                  : "text-gray-700 hover:text-green-600"
-              }`}
+              className='text-lg transition-colors'
             >
               {label}
             </Link>
